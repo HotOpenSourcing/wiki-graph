@@ -47,8 +47,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "rimraf dist && tsup --config tsup.config.ts && node ../../scripts/copy-package-data.mjs ../core/data dist/data",
-    "dev": "tsx src/bin/dev-cli.ts"
+    "build": "node init && rimraf dist && tsup --config tsup.config.ts && node ../../scripts/copy-package-data.mjs ../core/data dist/data",
+    "dev": "node init && tsx src/bin/dev-cli.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.68",

@@ -7,12 +7,12 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "build": "NODE_OPTIONS=--max-old-space-size=8192 pnpm -r --sort run build",
+    "build": "node init && NODE_OPTIONS=--max-old-space-size=8192 pnpm -r --sort run build",
     "coverage:report": "node ./scripts/coverage-report.mjs",
     "cli:clean-dev-state": "rimraf .wikigraph",
     "cli:install-local": "node ./scripts/install-local-cli.mjs",
     "cli:uninstall-local": "node ./scripts/uninstall-local-cli.mjs",
-    "dev": "pnpm --filter wiki-graph dev",
+    "dev": "node init && pnpm --filter wiki-graph dev",
     "fixtures:generate": "node ./scripts/generate-test-fixtures.mjs",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
